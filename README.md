@@ -2,7 +2,10 @@
 
 ## How to reproduce
 
-***Replace the following with your own 1)<your-project-id> 2)<gcc-name> 3)<gcf-endpoint>
+***Replace the following with your own 
+1) \<your-project-id>
+2) \<gcc-name>
+3) \<gcf-endpoint> 
 
 ### 1. Clone the repository
 
