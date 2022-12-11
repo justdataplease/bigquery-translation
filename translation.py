@@ -55,7 +55,7 @@ class Translator:
             response = request.json()
             detected = response[0].get("detectedLanguage")
             translation = response[0].get("translations")[0]
-            return {"detected_lang": detected['language'], 'detected_conf': detected['score'], 'trans_text': translation['text'],
+            return {"detected_lang": detected['language'], 'detected_conf': detected['score'], 'trans_text': translation['text'].lower(),
                     'trans_lang': translation['to'], "error": ""}
         except Exception as exc:
             return {"error": str(exc)}
