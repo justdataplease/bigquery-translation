@@ -4,8 +4,8 @@
 
 ***Replace the following with your own 
 1) \<your-project-id>
-2) \<gcf-conn-name>
-3) \<gcf-endpoint> 
+2) \<gcf-conn-name> - https://xxx.eu.gcf-conn
+3) \<gcf-endpoint> - https://bigquery-iplookup-xxx.a.run.app
 
 ### 1. Clone the repository
 
@@ -53,7 +53,7 @@
       json_value(trans_rs, '$.trans_text') trans_text,
       json_value(trans_rs, '$.trans_lang') trans_lang,
       json_value(trans_rs, '$.error') error
-    from a A
+    from a A;
     
 ### 8. CLI : Remove everything
     # Remove Cloud Function (gcf)
