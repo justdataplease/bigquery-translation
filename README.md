@@ -4,8 +4,8 @@
 
 ***Replace the following with your own 
 1) \<your-project-id>
-2) \<gcf-conn-name> - https://xxx.eu.gcf-conn
-3) \<gcf-endpoint> - https://bigquery-iplookup-xxx.a.run.app
+2) \<gcf-conn-name> - https://xxxxxx.eu.gcf-conn
+3) \<gcf-endpoint> - https://bigquery-iplookup-xxxxxx.a.run.app
 
 ### 1. Clone the repository
 
