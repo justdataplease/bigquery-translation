@@ -40,7 +40,7 @@
            ('Support me as a writer', 'fr'),
            ('Support me as a writer', 'de');
 
-### 7. BIGQUERY : Test remote function
+### 7. BIGQUERY : Test remote UDF
     WITH A AS (SELECT `<your-project-id>.translation.translate`(text,to_language) trans_rs,text origin_text FROM `<your-project-id>.translation.example_dataset`)
     
     select
