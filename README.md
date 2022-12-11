@@ -4,18 +4,18 @@
 
 ***Replace the following with your own 
 1) \<your-project-id>
-2) \<gcc-name>
+2) \<gcf-conn-name>
 3) \<gcf-endpoint> 
 
 ### 1. Clone the repository
 
-### 2. CLI : Deploy Cloud Function
+### 2. CLI : Deploy Cloud Function (gcf)
     gcloud functions deploy bigquery-translation --gen2 --runtime python39 --trigger-http --project=<your-project-id> --entry-point=translate --source . --region=europe-west3 --memory=128Mi --max-instances=3 --allow-unauthenticated
 
 ### 3. CLI : Create an example DATASET, in BigQuery. 
     bq mk --dataset_id=<your-project-id>:translation --location=EU
 
-### 4. CLI : Create a connection between BigQuery and Cloud Functions (gcf-conn). Make sure to note the first part of the last command (<gcc-name> format xxxx.eu.gcf-conn)
+### 4. CLI : Create a connection between BigQuery and Cloud Functions (gcf-conn). Make sure to note the first part of the last command (<gcf-conn-name> format xxxx.eu.gcf-conn)
     gcloud components update
     bq mk --connection --display_name='my_gcf_conn' --connection_type=CLOUD_RESOURCE --project_id=<your-project-id> --location=EU gcf-conn
     bq show --project_id=<your-project-id> --location=EU --connection gcf-conn
@@ -23,7 +23,7 @@
 ### 5. BIGQUERY : Create a remote UDF
     CREATE OR REPLACE FUNCTION `<your-project-id>.translation.translate`(text STRING, to_language STRING)
     RETURNS STRING
-    REMOTE WITH CONNECTION `<gcc-name>`
+    REMOTE WITH CONNECTION `<gcf-conn-name>`
         OPTIONS (
             -- change this to reflect the Trigger URL of your cloud function (look for the TRIGGER tab)
             endpoint = '<gcf-endpoint>'
@@ -56,11 +56,11 @@
     from a A
     
 ### 8. CLI : Remove everything
-    # Remove gcf
+    # Remove Cloud Function (gcf)
     gcloud functions delete bigquery-translation --region=europe-west3 --project=<your-project-id> --gen2
 
-    # Remove dataset
+    # Remove DATASET
     bq rm -r -f -d <your-project-id>:translation
 
-    # Remove gcc
-    bq rm --connection --location=EU <gcc-name>
+    # Remove connection between BigQuery and Cloud Functions (gcf-conn)
+    bq rm --connection --location=EU <gcf-conn-name>
