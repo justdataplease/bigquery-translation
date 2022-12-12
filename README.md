@@ -24,7 +24,7 @@ Visit Google [Cloud Console Functions](https://console.cloud.google.com/function
     bq show --project_id=<your-project-id> --location=EU --connection gcf-conn
 From the output of the last command, note the name <gcf-conn-name> (i.e. xxxxxx.eu.gcf-conn) 
 
-### 5. BIGQUERY : Create a remote UDF
+### 5. BIGQUERY : Create a Remote Function
     CREATE OR REPLACE FUNCTION `<your-project-id>.translation.translate`(text STRING, to_language STRING)
     RETURNS STRING
     REMOTE WITH CONNECTION `<gcf-conn-name>`
@@ -47,7 +47,7 @@ From the output of the last command, note the name <gcf-conn-name> (i.e. xxxxxx.
            ('Support me as a writer', 'fr'),
            ('Support me as a writer', 'de');
 
-### 7. BIGQUERY : Test remote UDF
+### 7. BIGQUERY : Test Remote Function
     WITH A AS (SELECT `<your-project-id>.translation.translate`(text,to_language) trans_rs,text origin_text FROM `<your-project-id>.translation.example_dataset`)
     
     select
