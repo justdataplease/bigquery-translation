@@ -1,4 +1,4 @@
-# Microservices as Functions in BigQuery - Language Translation (Part 1)
+# Microservices as Functions in BigQuery - Language Translation using SQL (Part 1)
 
 ## How to reproduce
 
