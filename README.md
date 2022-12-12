@@ -2,6 +2,12 @@
 
 ## How to reproduce
 
+***Perform the following actions
+
+Enable Google Cloud Functions. Read more [here](https://cloud.google.com/functions/docs/create-deploy-gcloud). \
+Install and configure gcloud CLI. Read more [here](https://cloud.google.com/functions/docs/create-deploy-gcloud). \
+Enable Azure Translator API. Read more [here](https://learn.microsoft.com/en-us/azure/cognitive-services/translator/translator-text-apis?tabs=csharp). 
+
 ***Replace the following with your own
 
 1) \<your-project-id>
