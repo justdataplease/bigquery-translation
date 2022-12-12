@@ -22,7 +22,7 @@ Visit Google [Cloud Console Functions](https://console.cloud.google.com/function
     gcloud components update
     bq mk --connection --display_name='my_gcf_conn' --connection_type=CLOUD_RESOURCE --project_id=<your-project-id> --location=EU gcf-conn
     bq show --project_id=<your-project-id> --location=EU --connection gcf-conn
-Note the name from the output of the last command <gcf-conn-name> (i.e. xxxxxx.eu.gcf-conn) 
+From the output of the last command, note the name <gcf-conn-name> (i.e. xxxxxx.eu.gcf-conn) 
 
 ### 5. BIGQUERY : Create a remote UDF
     CREATE OR REPLACE FUNCTION `<your-project-id>.translation.translate`(text STRING, to_language STRING)
