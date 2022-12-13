@@ -22,7 +22,7 @@ Enable Azure Translator API. Read more [here](https://learn.microsoft.com/en-us/
 
     gcloud functions deploy bigquery-translation --gen2 --runtime python39 --trigger-http --project=<your-project-id> --entry-point=translate --source . --region=europe-west3 --memory=128Mi --max-instances=3 --allow-unauthenticated
 
-From the output note the uri  <gcf-endpoint> (i.e https://bigquery-iplookup-xxxxxx.a.run.app) 
+From the output note the uri  <gcf-endpoint> (i.e https://bigquery-translation-xxxxxx.a.run.app) 
 or visit Google [Cloud Console Functions](https://console.cloud.google.com/functions/list?project=).
 
 ### 3. CLI : Create a connection between BigQuery and Cloud Functions (gcf-conn).
