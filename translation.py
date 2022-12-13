@@ -14,8 +14,6 @@ class Translator:
         """
         # Set up the credentials for the Translator Text API
         # Add your key and endpoint
-        # self.key = config('AZURE_TRANSLATION_KEY')
-        # self.location = config('AZURE_TRANSLATION_LOCATION')
         self.key = os.getenv('AZURE_TRANSLATION_KEY')
         self.location = os.getenv('AZURE_TRANSLATION_LOCATION')
         self.constructed_url = "https://api.cognitive.microsofttranslator.com/translate"
