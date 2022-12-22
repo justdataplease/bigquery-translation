@@ -1,5 +1,7 @@
 # Microservices as Functions in BigQuery - Language Translation using SQL (Part 1)
 
+Read original article [here](https://medium.com/geekculture/microservices-as-functions-in-bigquery-language-translation-using-sql-part-1-bd875b291338).
+
 ## How to reproduce
 
 ***Perform the following actions
