@@ -1,12 +1,17 @@
 # Microservices as Functions in BigQuery - Language Translation using SQL (Part 1)
 
+Read original
+article [here](https://medium.com/geekculture/microservices-as-functions-in-bigquery-language-translation-using-sql-part-1-bd875b291338)
+.
+
 ## How to reproduce
 
 ***Perform the following actions
 
 Enable Google Cloud Functions. Read more [here](https://cloud.google.com/functions/docs/create-deploy-gcloud). \
 Install and configure gcloud CLI. Read more [here](https://cloud.google.com/functions/docs/create-deploy-gcloud). \
-Enable Azure Translator API. Read more [here](https://learn.microsoft.com/en-us/azure/cognitive-services/translator/translator-text-apis?tabs=csharp). 
+Enable Azure Translator API. Read
+more [here](https://learn.microsoft.com/en-us/azure/cognitive-services/translator/translator-text-apis?tabs=csharp).
 
 ***Replace the following with your own
 
@@ -22,8 +27,8 @@ Enable Azure Translator API. Read more [here](https://learn.microsoft.com/en-us/
 
     gcloud functions deploy bigquery-translation --gen2 --runtime python39 --trigger-http --project=<your-project-id> --entry-point=translate --source . --region=europe-west3 --memory=128Mi --max-instances=3 --allow-unauthenticated
 
-Visit Google [Cloud Console Functions](https://console.cloud.google.com/functions/list?project=) to retrieve <
-gcf-endpoint> (i.e https://bigquery-translation-xxxxxx.a.run.app)
+From the output note the uri  <gcf-endpoint> (i.e https://bigquery-translation-xxxxxx.a.run.app)
+or visit Google [Cloud Console Functions](https://console.cloud.google.com/functions/list?project=).
 
 ### 3. CLI : Create a connection between BigQuery and Cloud Functions (gcf-conn).
 
@@ -50,7 +55,7 @@ From the output of the last command, note the name <gcf-conn-name> (i.e. xxxxxx.
            ('Support me as a writer', 'es'),
            ('Support me as a writer', 'fr'),
            ('Support me as a writer', 'de');
-     
+
 ### 6. BIGQUERY : Create a Remote Function
 
     CREATE OR REPLACE FUNCTION `<your-project-id>.translation.translate`(text STRING, to_language STRING)
@@ -105,7 +110,6 @@ From the output of the last command, note the name <gcf-conn-name> (i.e. xxxxxx.
     detected_conf : 1.0
     trans_text : soutenez-moi en tant qu’écrivain
     trans_lang : fr
-    
 
 ### 8. CLI : Remove everything
 
@@ -116,4 +120,9 @@ From the output of the last command, note the name <gcf-conn-name> (i.e. xxxxxx.
     bq rm -r -f -d <your-project-id>:translation
 
     # Remove connection between BigQuery and Cloud Functions (gcf-conn)
-    bq rm --connection --location=EU <gcf-conn>
+
+<<<<<<< HEAD
+bq rm --connection --location=EU <gcf-conn>
+=======
+bq rm --connection --location=EU <gcf-conn-name>
+> > > > > > > bb03aa94b2094a5cb3d711d0814c95641e424b1b
