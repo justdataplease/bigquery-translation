@@ -120,9 +120,4 @@ From the output of the last command, note the name <gcf-conn-name> (i.e. xxxxxx.
     bq rm -r -f -d <your-project-id>:translation
 
     # Remove connection between BigQuery and Cloud Functions (gcf-conn)
-
-<<<<<<< HEAD
-bq rm --connection --location=EU <gcf-conn>
-=======
-bq rm --connection --location=EU <gcf-conn-name>
-> > > > > > > bb03aa94b2094a5cb3d711d0814c95641e424b1b
+    bq rm --connection --location=EU <gcf-conn>
