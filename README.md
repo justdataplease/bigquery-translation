@@ -86,24 +86,28 @@ From the output of the last command, note the name <gcf-conn-name> (i.e. xxxxxx.
     detected_conf : 1.0
     trans_text : estamos aprendiendo grandes cosas hoy
     trans_lang : es
+
     2
     origin_text : I love programming
     detected_lang : en
     detected_conf : 1.0
     trans_text : me encanta programar
     trans_lang : es
+
     3
     origin_text : Support me as a writer
     detected_lang : en
     detected_conf : 1.0
     trans_text : apóyame como escritor
     trans_lang : es
+
     4
     origin_text : Support me as a writer
     detected_lang : en
     detected_conf : 1.0
     trans_text : unterstütze mich als schriftsteller
     trans_lang : de
+
     5
     origin_text : Support me as a writer
     detected_lang : en
