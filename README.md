@@ -118,7 +118,7 @@ Output
 
 ### 8. CLI : Remove everything
 
-    # Remove Cloud Function (gcf)
+    # Remove Cloud Function (gcf-endpoint)
     gcloud functions delete bigquery-translation --region=europe-west3 --project=<your-project-id> --gen2
 
     # Remove DATASET
