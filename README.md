@@ -79,7 +79,8 @@ From the output of the last command, note the name <gcf-conn-name> (i.e. xxxxxx.
       json_value(trans_rs, '$.error') error
     from a A;
     
-    -- Output 
+Output 
+
     1
     origin_text : We are learning great things today
     detected_lang : en
